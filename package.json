@@ -24,6 +24,7 @@
     "dependencies": {
         "@inertiajs/vue3": "^1.0.12",
         "@popperjs/core": "^2.11.8",
+        "@splidejs/vue-splide": "^0.6.12",
         "bootstrap": "^5.3.2"
     }
 }

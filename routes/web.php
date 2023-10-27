@@ -1,13 +1,12 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\JobFairController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
-use App\Models\Post;
-use App\Models\Project;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -20,7 +19,7 @@ use Inertia\Inertia;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('clients', ClientController::class)->name('clients.index');
 Route::get('team', TeamController::class)->name('team.index');
@@ -37,26 +36,12 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
-Route::get('blog', function () {
-    return Inertia::render('Blog/Index', [
-        'posts' => Post::with('category')->get(),
-    ]);
-})->name('blog.index');
+Route::resource('blog', BlogController::class)
+    ->only('index', 'show')
+    ->scoped(['post' => 'slug'])
+    ->parameter('blog', 'post');
 
-Route::get('blog/{post:slug}', function (Post $post) {
-    return Inertia::render('Blog/Show', [
-        'post' => $post,
-    ]);
-})->name('blog.show');
-
-Route::get('portfolio', function () {
-    return Inertia::render('Portfolio/Index', [
-        'projects' => Project::with('category')->get(),
-    ]);
-})->name('portfolio.index');
-
-Route::get('portfolio/{project:slug}', function (Project $project) {
-    return Inertia::render('Portfolio/Show', [
-        'project' => $project->load('category'),
-    ]);
-})->name('portfolio.show');
+Route::resource('portfolio', ProjectController::class)
+    ->only('index', 'show')
+    ->scoped(['project' => 'slug'])
+    ->parameter('portfolio', 'project');

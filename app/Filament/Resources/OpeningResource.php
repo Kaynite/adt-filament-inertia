@@ -85,9 +85,9 @@ class OpeningResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index'  => Pages\ListOpenings::route('/'),
+            'index' => Pages\ListOpenings::route('/'),
             'create' => Pages\CreateOpening::route('/create'),
-            'edit'   => Pages\EditOpening::route('/{record}/edit'),
+            'edit' => Pages\EditOpening::route('/{record}/edit'),
         ];
     }
 }
