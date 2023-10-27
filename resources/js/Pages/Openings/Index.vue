@@ -1,21 +1,25 @@
 <script setup lang="ts">
 import PageLayout from '@/Layouts/PageLayout.vue';
 import JobFairPost from '@/Components/JobFairPost.vue';
-import Breadcrumb from '@/Components/Breadcrumb.vue';
+
 defineProps<{
     jobFairs: JobFair[]
 }>()
 </script>
 
 <template>
-    <Head title="Job Fairs" />
+    <Head title="Openings" />
 
-    <PageLayout title="Job Fairs">
+    <PageLayout title="Openings">
         <!--Latest-Job-Fair Section-->
         <section class="latest-jobfair">
             <div class="container">
                 <div class="page-locat mb-24 mt-5">
-                    <Breadcrumb :items="[{ title: 'Careers' }, { title: 'Job Fairs' }]" />
+                    <a href="index.html" class="colored">Home</a>
+                    <span><img src="@images/Icons-Outlined.svg" /></span>
+                    <span>Careers</span>
+                    <span><img src="@images/Icons-Outlined.svg" /></span>
+                    <span>Job Fairs</span>
                 </div>
                 <div class="section-title mb-40">
                     <h4>Highlights</h4>
@@ -54,7 +58,7 @@ defineProps<{
                     <h4>All Job Fairs</h4>
                     <h2>Explore <span class="colored">ArabDT</span> Job Fairs</h2>
                 </div>
-                <JobFairPost :job-fair="fair" v-for=" fair  in  jobFairs " />
+                <JobFairPost :job-fair="fair" v-for="fair in jobFairs" :key="fair.id" />
             </div>
         </section>
     </PageLayout>

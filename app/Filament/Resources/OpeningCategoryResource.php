@@ -2,32 +2,30 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ImageResource\Pages;
-use App\Models\Image;
+use App\Filament\Resources\OpeningCategoryResource\Pages;
+use App\Models\OpeningCategory;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class ImageResource extends Resource
+class OpeningCategoryResource extends Resource
 {
-    protected static ?string $model = Image::class;
+    protected static ?string $model = OpeningCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationLabel = 'Gallery';
-
-    protected static ?string $navigationGroup = 'ArabDT';
+    protected static ?string $navigationGroup = 'Careers';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\SpatieMediaLibraryFileUpload::make('image')
-                    ->collection('image'),
-                Forms\Components\TextInput::make('caption')
-                    ->maxLength(255),
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255)
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -35,10 +33,8 @@ class ImageResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('caption')
+                Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\SpatieMediaLibraryImageColumn::make('image')
-                    ->collection('image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -53,13 +49,13 @@ class ImageResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ])
-            ->defaultSort('id', 'desc');
+            ]);
     }
 
     public static function getRelations(): array
@@ -72,9 +68,7 @@ class ImageResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListImages::route('/'),
-            // 'create' => Pages\CreateImage::route('/create'),
-            // 'edit' => Pages\EditImage::route('/{record}/edit'),
+            'index' => Pages\ListOpeningCategories::route('/'),
         ];
     }
 }

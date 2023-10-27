@@ -2,7 +2,7 @@
 import PageLayout from '@/Layouts/PageLayout.vue';
 import RequestQuotation from "@/Components/RequestQuotation.vue";
 import ClientTestimonial from "@/Components/ClientTestimonial.vue";
-
+import Breadcrumb from '@/Components/Breadcrumb.vue';
 defineProps<{
     clients: Client[],
     testimonials: Testimonial[]
@@ -15,14 +15,10 @@ defineProps<{
     <PageLayout title="Clients">
         <!--About-Partners Section-->
         <section class="about-partners pt-40 pb-80 position-relative">
-            <img src="@images/Vector5.svg" class="position-absolute blog-circles" alt="" />
+            <img src="@images/Vector5.svg" class="position-absolute blog-circles" />
             <div class="container">
                 <div class="page-locat mb-24">
-                    <Link :href="route('home')" class="colored">Home</Link>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>About</span>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>Team</span>
+                    <Breadcrumb :items="[{ title: 'About' }, { title: 'Clients' }]" />
                 </div>
                 <div class="section-header text-center mb-40">
                     <h4>Highlights</h4>
@@ -32,7 +28,7 @@ defineProps<{
                 </div>
                 <div class="about-clients">
                     <div class="row">
-                        <div class="col-6 col-md-4 col-lg-3 mb-40" v-for="client in clients">
+                        <div class="col-6 col-md-4 col-lg-3 mb-40" v-for="client in clients" :key="client.id">
                             <img :src="client.logo" class="img-fluid" :alt="client.name" v-if="client.logo" />
                         </div>
                     </div>
@@ -42,8 +38,8 @@ defineProps<{
 
         <!--About-Testimonials Section-->
         <section class="about-testimonial py-80 bg-sec position-relative">
-            <img src="@images/Group 18.svg" class="position-absolute ab-testi-img1" alt="" />
-            <img src="@images/Group 18.svg" class="position-absolute ab-testi-img2" alt="" />
+            <img src="@images/Group 18.svg" class="position-absolute ab-testi-img1" />
+            <img src="@images/Group 18.svg" class="position-absolute ab-testi-img2" />
             <div class="container position-relative z-1">
                 <div class="section-title mb-40">
                     <h4>Testimonials</h4>
@@ -54,7 +50,8 @@ defineProps<{
                 </div>
                 <div class="about-testi-body">
                     <div class="row">
-                        <ClientTestimonial :testimonial="testimonial" v-for="testimonial in testimonials" />
+                        <ClientTestimonial :testimonial="testimonial" v-for="testimonial in testimonials"
+                            :key="testimonial.id" />
                     </div>
                 </div>
             </div>

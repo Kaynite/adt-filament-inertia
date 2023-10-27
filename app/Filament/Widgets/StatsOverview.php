@@ -2,6 +2,8 @@
 
 namespace App\Filament\Widgets;
 
+use App\Filament\Resources\MessageResource;
+use App\Models\Message;
 use App\Models\Post;
 use App\Models\Project;
 use App\Models\TeamMember;
@@ -13,6 +15,9 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         return [
+            Stat::make('New Messages', Message::new()->count())
+                ->icon('heroicon-o-envelope')
+                ->url(MessageResource::getUrl()),
             Stat::make('Total Number of Posts', Post::count())
                 ->icon('heroicon-o-newspaper')
                 ->description('Description Will Appear Here'),

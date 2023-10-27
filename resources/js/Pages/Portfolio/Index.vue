@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import PortfolioProject from '@/Components/PortfolioProject.vue';
 import PageLayout from '@/Layouts/PageLayout.vue';
+import Breadcrumb from '@/Components/Breadcrumb.vue';
 
 defineProps<{
     projects: Project[]
@@ -15,10 +16,9 @@ defineProps<{
             <div class="section-filter pt-40 pb-80 position-relative">
                 <div class="container">
                     <div class="page-locat mb-24">
-                        <a href="index.html" class="colored">Home</a>
-                        <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                        <span>Portfolio</span>
+                        <Breadcrumb :items="[{ title: 'Portfolio' }]" />
                     </div>
+
                     <div class="section-title mb-40">
                         <h4>Our Portfolio</h4>
                         <h2>We Work With A <span class="colored">Goal</span></h2>

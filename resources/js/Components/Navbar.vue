@@ -27,20 +27,20 @@ import MenuItem from '@/Components/MenuItem.vue';
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>
                                 <Link class="dropdown-item" :href="route('pages.history')">
-                                <img src="@images/arab-history-icon-nav.svg" alt="" class="m-2">
+                                <img src="@images/arab-history-icon-nav.svg" class="m-2">
                                 ArabDT History
                                 </Link>
                             </li>
 
                             <li>
                                 <Link class="dropdown-item" :href="route('team.index')">
-                                <img src="@images/arab-team-icon-nav.svg" alt="" class="m-2">
+                                <img src="@images/arab-team-icon-nav.svg" class="m-2">
                                 Team
                                 </Link>
                             </li>
                             <li>
                                 <Link class="dropdown-item" :href="route('clients.index')">
-                                <img src="@images/arab-clients-icon-nav.svg" alt="" class="m-2">
+                                <img src="@images/arab-clients-icon-nav.svg" class="m-2">
                                 Clients
                                 </Link>
                             </li>
@@ -52,14 +52,14 @@ import MenuItem from '@/Components/MenuItem.vue';
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#"> <img src="@images/arab-prof-icon-nav.svg" alt=""
+                            <li><a class="dropdown-item" href="#"> <img src="@images/arab-prof-icon-nav.svg"
                                         class="m-2">
                                     Professional Services</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="@images/arab-prod-icon-nav.svg" alt=""
+                            <li><a class="dropdown-item" href="#"><img src="@images/arab-prod-icon-nav.svg"
                                         class="m-2">Products</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="@images/arab-cons-icon-nav.svg" alt=""
+                            <li><a class="dropdown-item" href="#"><img src="@images/arab-cons-icon-nav.svg"
                                         class="m-2">Consultation</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="@images/arab-out-icon-nav.svg" alt=""
+                            <li><a class="dropdown-item" href="#"><img src="@images/arab-out-icon-nav.svg"
                                         class="m-2">Outsourcing</a></li>
                         </ul>
                     </li>
@@ -84,7 +84,7 @@ import MenuItem from '@/Components/MenuItem.vue';
                             </li>
                             <li>
                                 <Link class="dropdown-item" :href="route('pages.gallery')">
-                                    <img src="@images/arab-gallery-icon-nav.svg" alt="" class="m-2">
+                                    <img src="@images/arab-gallery-icon-nav.svg" class="m-2">
                                     Gallery
                                 </Link>
                             </li>
@@ -102,20 +102,20 @@ import MenuItem from '@/Components/MenuItem.vue';
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="career-openings.html"><img
-                                        src="@images/arab-career-icon-nav.svg" alt="" class="m-2">Career Openings</a>
+                                        src="@images/arab-career-icon-nav.svg" class="m-2">Career Openings</a>
                             </li>
                             <li><a class="dropdown-item" href="Internship-openings.html"><img
-                                        src="@images/arab-intern-icon-nav.svg" alt="" class="m-2">Internship
+                                        src="@images/arab-intern-icon-nav.svg" class="m-2">Internship
                                     Opennings</a></li>
                             <li>
                                 <Link class="dropdown-item" :href="route('pages.talent')">
-                                    <img src="@images/arab-apply-icon-nav.svg" alt="" class="m-2">
+                                    <img src="@images/arab-apply-icon-nav.svg" class="m-2">
                                     Apply As Talent
                                 </Link>
                             </li>
                             <li>
                                 <Link class="dropdown-item" :href="route('job-fairs.index')">
-                                    <img src="@images/arab-job-icon-nav.svg" alt="" class="m-2">
+                                    <img src="@images/arab-job-icon-nav.svg" class="m-2">
                                     Job Fairs
                                 </Link>
                             </li>

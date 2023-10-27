@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PageLayout from "@/Layouts/PageLayout.vue";
-
+import Breadcrumb from "@/Components/Breadcrumb.vue";
 defineProps<{
     images: Image[]
 }>()
@@ -21,11 +21,7 @@ const getClass = (index: number): string => {
         <section class="moments pt-40 pb-80 position-relative">
             <div class="container">
                 <div class="page-locat mb-24">
-                    <a href="index.html" class="colored">Home</a>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>Life At ArabDT</span>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>Gallery</span>
+                    <Breadcrumb :items="[{ title: 'Life At ArabDT' }, { title: 'Gallery' }]" />
                 </div>
                 <div class="section-title mb-40">
                     <h4>Photo Album</h4>
@@ -34,37 +30,37 @@ const getClass = (index: number): string => {
                 <div class="moments-gallery d-flex gap-24 mb-40 text-gray">
                     <button class="btn btn-default filter-button active" data-filter="all">
                         <div class="d-flex align-items-center gap-8 ">
-                            <img src="@images/All.svg" class="img-fluid" alt="" />
+                            <img src="@images/All.svg" class="img-fluid" />
                             <span>All</span>
                         </div>
                     </button>
                     <button class="btn btn-default filter-button text-gray" data-filter="Anniversaries">
                         <div class="d-flex align-items-center gap-8 ">
-                            <img src="@images/Anniversary.svg" class="img-fluid" alt="" />
+                            <img src="@images/Anniversary.svg" class="img-fluid" />
                             <span>Anniversaries</span>
                         </div>
                     </button>
                     <button class="btn btn-default filter-button text-gray" data-filter="Celebrations">
                         <div class="d-flex align-items-center gap-8  ">
-                            <img src="@images/Celebration (1) 1.svg" class="img-fluid" alt="" />
+                            <img src="@images/Celebration (1) 1.svg" class="img-fluid" />
                             <span>Celebrations</span>
                         </div>
                     </button>
                     <button class="btn btn-default filter-button text-gray" data-filter="Trips">
                         <div class="d-flex align-items-center gap-8">
-                            <img src="@images/Trips (2) 1.svg" class="img-fluid" alt="" />
+                            <img src="@images/Trips (2) 1.svg" class="img-fluid" />
                             <span>Trips</span>
                         </div>
                     </button>
                     <button class="btn btn-default filter-button text-gray" data-filter="Intranets">
                         <div class="d-flex align-items-center gap-8 ">
-                            <img src="@images/JobFair (1) 1.svg" class="img-fluid" alt="" />
+                            <img src="@images/JobFair (1) 1.svg" class="img-fluid" />
                             <span>Job Fairs</span>
                         </div>
                     </button>
                     <button class="btn btn-default filter-button text-gray" data-filter="Intranets">
                         <div class="d-flex align-items-center gap-8 ">
-                            <img src="@images/Fun-Outing 1.svg" class="img-fluid" alt="" />
+                            <img src="@images/Fun-Outing 1.svg" class="img-fluid" />
                             <span>Outings</span>
                         </div>
                     </button>
@@ -73,7 +69,7 @@ const getClass = (index: number): string => {
                 <div class="row popup-gallery">
                     <div class="col-12 filter Anniversaries" :class="getClass(index)" v-for="(image, index) in images">
                         <a :href="image.image ?? '#'">
-                            <img :src="image.image" class="img-fluid w-100" alt="" v-if="image.image" />
+                            <img :src="image.image" class="img-fluid w-100" v-if="image.image" />
                             <h5 class="colored mb-24">{{ image.caption }}</h5>
                         </a>
                     </div>

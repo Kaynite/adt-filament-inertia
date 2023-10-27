@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import PageLayout from '@/Layouts/PageLayout.vue';
+import Breadcrumb from '@/Components/Breadcrumb.vue';
 
 type Event = {
     id: number;
@@ -29,13 +30,13 @@ defineProps<{
         <section class="third_anni pt-40 pb-80 position-relative">
             <div class="container">
                 <div class="page-locat mb-24">
-                    <a href="index.html" class="colored">Home</a>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>Life At ArabDT</span>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <a href="news-events-list.html" class="colored">News & Events</a>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>ArabDT Job Fair</span>
+                    <Breadcrumb
+                        :items="[
+                            { title: 'Life At ArabDT' },
+                            { title: 'News & Events', url: route('events.index') },
+                            {title: event.title}
+                        ]"
+                    />
                 </div>
                 <div class="card">
                     <img :src="event.thumbnail" class="card-img-top" :alt="event.title" v-if="event.thumbnail" />
@@ -43,14 +44,14 @@ defineProps<{
                         <h2 class="card-title title-color mb-16">{{ event.title }}</h2>
                         <div class="d-flex datetime align-items-center mb-24 w-100">
                             <div class="date d-flex align-items-center w-50 justify-content-start">
-                                <img src="@images/Date-Time1.svg" alt="" />
+                                <img src="@images/Date-Time1.svg" />
                                 <h6>
                                     {{ event.event_date }}
                                     <span class="fw-normal">({{ event.from }} - {{ event.to }})</span>
                                 </h6>
                             </div>
                             <div class="locate d-flex align-items-center w-50">
-                                <img src="@images/Location (1).svg" alt="" />
+                                <img src="@images/Location (1).svg" />
                                 <h6 class="secondary-color">{{ event.location }}</h6>
                             </div>
                         </div>

@@ -45,7 +45,7 @@ function submit() {
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-12  mb-40 text-center mt-5">
-                                            <!-- <img src="@images/Tick.svg" class="img-fluid " alt=""> -->
+                                            <!-- <img src="@images/Tick.svg" class="img-fluid "> -->
                                         </div>
                                         <div class="col-12  mb-40">
                                             <p class="colored-text mb-40 mt-4">
@@ -126,13 +126,13 @@ function submit() {
                     <div class="col-lg-4 col-md-4 col-sm-12">
                         <div class="card w-100 ">
                             <div class="card-body info-cards">
-                                <img class="mt-3 " src="@images/envelope.svg" alt="" />
+                                <img class="mt-3 " src="@images/envelope.svg" />
                                 <p class="mt-4">Info@arabdt.com</p>
                             </div>
                         </div>
                         <div class="card w-100 mt-3">
                             <div class="card-body info-cards">
-                                <img class="mt-3" src="@images/Location-white.svg" alt="" />
+                                <img class="mt-3" src="@images/Location-white.svg" />
                                 <p class="mt-4">
                                     Egypt —5th District, New Cairo, Cairo, Egypt
                                 </p>
@@ -140,7 +140,7 @@ function submit() {
                         </div>
                         <div class="card w-100 mt-3">
                             <div class="card-body info-cards">
-                                <img class="mt-3" src="@images/lg-Phone.svg" alt="" />
+                                <img class="mt-3" src="@images/lg-Phone.svg" />
                                 <p class="mt-4">(+20) 2563 5967</p>
                             </div>
                         </div>

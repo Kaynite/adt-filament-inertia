@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import PageLayout from "@/Layouts/PageLayout.vue";
+import Breadcrumb from "@/Components/Breadcrumb.vue";
 </script>
 
 
@@ -13,15 +14,11 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                     <div class="col-lg-12 col-md-12 ERP Systems">
                         <div class="card w-100">
                             <div class="page-locat mb-24">
-                                <a href="index.html" class="colored">Home</a>
-                                <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                                <span class="colored">Careers</span>
-                                <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                                <span>Apply As Talent</span>
+                                <Breadcrumb :items="[{ title: 'Careers' }, { title: 'Apply as talent' }]" />
                             </div>
                             <div class="section-title mb-40">
                                 <div class="img-container mb-16">
-                                    <img src="@images/apply-as-talent.svg" class="img-fluid w-100" alt="">
+                                    <img src="@images/apply-as-talent.svg" class="img-fluid w-100">
                                 </div>
                                 <h4>Join Our Team</h4>
                                 <h2>Are You A <span class="colored">Talented Individual </span>Who Is Looking For
@@ -36,15 +33,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                                     part
                                     of our journey
                                 </p>
-
                             </div>
-
-
-
-
-
-
-
                         </div>
 
                     </div>
@@ -57,17 +46,17 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <div class="img-container position-relative">
-                            <img src="@images/Img-Careers.png" class="img-fluid radius-16" alt="">
+                            <img src="@images/Img-Careers.png" class="img-fluid radius-16">
                             <div class="highlighted-box position-absolute Cooperation d-flex align-items-center">
-                                <img src="@images/Icons-Light (11).svg" alt="">
+                                <img src="@images/Icons-Light (11).svg">
                                 <h6>Cooperation</h6>
                             </div>
                             <div class="highlighted-box position-absolute Equity d-flex align-items-center">
-                                <img src="@images/Equity.svg" alt="">
+                                <img src="@images/Equity.svg">
                                 <h6>Equity</h6>
                             </div>
                             <div class="highlighted-box position-absolute Simplicity d-flex align-items-center">
-                                <img src="@images/Simplicity 1.svg" alt="">
+                                <img src="@images/Simplicity 1.svg">
                                 <h6>Simplicity</h6>
                             </div>
                         </div>
@@ -93,37 +82,37 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                             <div class="d-flex flex-column flex-lg-row w-100 position-relative">
                                 <div class="w-50">
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Training (1) 1.svg" class="img-fluid" alt="">
+                                        <img src="@images/Training (1) 1.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Training &amp; Development</h6>
                                     </div>
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Bonus.svg" class="img-fluid" alt="">
+                                        <img src="@images/Bonus.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Quarterly Bonus</h6>
                                     </div>
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Wfh (1) 1.svg" class="img-fluid" alt="">
+                                        <img src="@images/Wfh (1) 1.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Work From Home</h6>
                                     </div>
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Medical (2).svg" class="img-fluid" alt="">
+                                        <img src="@images/Medical (2).svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Medical Insurance</h6>
                                     </div>
                                 </div>
                                 <div class="w-50">
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Environment 1.svg" class="img-fluid" alt="">
+                                        <img src="@images/Environment 1.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Innovative Environment</h6>
                                     </div>
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Benefits.svg" class="img-fluid" alt="">
+                                        <img src="@images/Benefits.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Corporate Benefits</h6>
                                     </div>
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Fun.svg" class="img-fluid" alt="">
+                                        <img src="@images/Fun.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Fun Activities</h6>
                                     </div>
                                     <div class="d-flex align-items-center gap-8 mb-24">
-                                        <img src="@images/Social-umberlla.svg" class="img-fluid" alt="">
+                                        <img src="@images/Social-umberlla.svg" class="img-fluid">
                                         <h6 class="normal-lineheight">Social Insurance</h6>
                                     </div>
                                 </div>
@@ -166,13 +155,13 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                             <label class="form-label title-color">Resume<span>*</span></label>
                             <div class="file-upload-container">
                                 <label for="file-upload" class="file-upload-label" id="label-file">
-                                    <img src="@images/file.svg" alt="" />
+                                    <img src="@images/file.svg" />
                                     <p><span class="colored">Upload a file</span> or drag and drop here</p>
                                 </label>
                                 <input type="file" id="file-upload" class="form-control file-upload-input"
                                     accept=".pdf,.doc,.docx,.jpg,.png" />
                                 <div id="uploaded-file" class="uploaded-file-container">
-                                    <img src="@images/file.svg" alt="" />
+                                    <img src="@images/file.svg" />
                                     <span class="file-name"></span>
                                 </div>
                             </div>

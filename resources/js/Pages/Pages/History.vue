@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import RequestQuotation from "@/Components/RequestQuotation.vue";
 import PageLayout from "@/Layouts/PageLayout.vue";
+import Breadcrumb from "@/Components/Breadcrumb.vue";
 </script>
 
 <template>
@@ -8,14 +9,10 @@ import PageLayout from "@/Layouts/PageLayout.vue";
     <PageLayout title="ArabDT History">
         <!--History-About Section-->
         <section class="history-ab pt-40 pb-80 position-relative">
-            <img src="@images/Vector5.svg" class="position-absolute branch-circles" alt="" />
+            <img src="@images/Vector5.svg" class="position-absolute branch-circles" />
             <div class="container">
                 <div class="page-locat mb-24">
-                    <a class="colored" href="index.html">Home</a>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>About</span>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>ArabDT History</span>
+                    <Breadcrumb :items="[{ title: 'About' }, { title: 'ArabDT History' }]" />
                 </div>
                 <div class="row pb-80">
                     <div class="col-12 col-md-6 about-text d-flex flex-column gap-40">
@@ -43,28 +40,28 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         <div class="prog-boxs d-flex flex-wrap">
                             <div class="progr-box projects text-center d-flex flex-column align-items-center gap-8">
                                 <div class="img-container radius-8 d-flex align-items-center justify-content-center">
-                                    <img src="@images/Icons-Light (5).svg" alt="" />
+                                    <img src="@images/Icons-Light (5).svg" />
                                 </div>
                                 <h3 class="colored">1 +</h3>
                                 <h5 class="title-color">Projects</h5>
                             </div>
                             <div class="progr-box clients text-center d-flex flex-column align-items-center gap-8">
                                 <div class="img-container radius-8 d-flex align-items-center justify-content-center">
-                                    <img src="@images/Icons-Light (6).svg" alt="" />
+                                    <img src="@images/Icons-Light (6).svg" />
                                 </div>
                                 <h3 class="colored">1 +</h3>
                                 <h5 class="title-color">satisfied Clients</h5>
                             </div>
                             <div class="progr-box partners text-center d-flex flex-column align-items-center gap-8">
                                 <div class="img-container radius-8 d-flex align-items-center justify-content-center">
-                                    <img src="@images/Icons-Light (7).svg" alt="" />
+                                    <img src="@images/Icons-Light (7).svg" />
                                 </div>
                                 <h3 class="colored">1 +</h3>
                                 <h5 class="title-color">Business Partners</h5>
                             </div>
                             <div class="progr-box retention text-center d-flex flex-column align-items-center gap-8">
                                 <div class="img-container radius-8 d-flex align-items-center justify-content-center">
-                                    <img src="@images/Icons-Light (8).svg" alt="" />
+                                    <img src="@images/Icons-Light (8).svg" />
                                 </div>
                                 <h3 class="colored">0 %</h3>
                                 <h5 class="title-color">customer Retention</h5>
@@ -98,7 +95,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         <h2 class="colored">Our Values</h2>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 mb-40">
-                        <img src="@images/Colored-Icons.svg" class="img-fluid mb-16 about-icon" alt="" />
+                        <img src="@images/Colored-Icons.svg" class="img-fluid mb-16 about-icon" />
                         <h5 class="mb-8 title-color">Team Work Oriented</h5>
                         <p class="fz-20 text-gray normal-lineheight">
                             Two heads are better than one always, we are
@@ -106,7 +103,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         </p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 mb-40">
-                        <img src="@images/21.svg" class="img-fluid mb-16 about-icon" alt="" />
+                        <img src="@images/21.svg" class="img-fluid mb-16 about-icon" />
                         <h5 class="mb-8 title-color">Knowledge Sharing</h5>
                         <p class="fz-20 text-gray">
                             Power lies in the knowledge sharing, we
@@ -115,7 +112,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         </p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 mb-40">
-                        <img src="@images/Colored-Icons (1).svg" class="img-fluid mb-16 about-icon" alt="" />
+                        <img src="@images/Colored-Icons (1).svg" class="img-fluid mb-16 about-icon" />
                         <h5 class="mb-8 title-color">Commitment</h5>
                         <p class="fz-20 text-gray">
                             Keeping an eye on every detail for better
@@ -123,7 +120,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         </p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 mb-40">
-                        <img src="@images/Colored-Icons (2).svg" class="img-fluid mb-16 about-icon" alt="" />
+                        <img src="@images/Colored-Icons (2).svg" class="img-fluid mb-16 about-icon" />
                         <h5 class="mb-8 title-color">Value-Centricity</h5>
                         <p class="fz-20 text-gray">
                             The most important element in our work is
@@ -131,7 +128,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         </p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 mb-40">
-                        <img src="@images/6.svg" class="img-fluid mb-16 about-icon" alt="" />
+                        <img src="@images/6.svg" class="img-fluid mb-16 about-icon" />
                         <h5 class="mb-8 title-color">Trust</h5>
                         <p class="fz-20 text-gray">
                             Always be honest and transparent no matter what, we
@@ -139,7 +136,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                         </p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 mb-40">
-                        <img src="@images/Colored-Icons (3).svg" class="img-fluid mb-16 about-icon" alt="" />
+                        <img src="@images/Colored-Icons (3).svg" class="img-fluid mb-16 about-icon" />
                         <h5 class="mb-8 title-color">Dignity and Respect</h5>
                         <p class="fz-20 text-gray">
                             Everyone’s opinion matters, we value each one’s
@@ -158,7 +155,7 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                     <h2>Timeline Of <span class="colored">Progress</span></h2>
                     <div class="timeline-item">
                         <div class="timeline-logo">
-                            <img src="@images/timeline-icon.svg" alt="">
+                            <img src="@images/timeline-icon.svg">
                         </div>
 
 
@@ -174,11 +171,11 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                                 <div class="card-body">
                                     <h2>2019</h2>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">Become 50+ Employees</p>
                                     </div>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">10+ Kick-Off Projects</p>
                                     </div>
                                 </div>
@@ -193,11 +190,11 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                                 <div class="card-body">
                                     <h2>2020</h2>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">Founded</p>
                                     </div>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">5+ Kicked-off Projects</p>
                                     </div>
                                 </div>
@@ -212,11 +209,11 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                                 <div class="card-body">
                                     <h2>2021</h2>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">6+ Employees</p>
                                     </div>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">New Headquarter</p>
                                     </div>
                                 </div>
@@ -231,15 +228,15 @@ import PageLayout from "@/Layouts/PageLayout.vue";
                                 <div class="card-body">
                                     <h2>2022</h2>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">10+ Product Developed</p>
                                     </div>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">20+ Project Launched</p>
                                     </div>
                                     <div class="d-flex mt-3">
-                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" alt="..." /></div>
+                                        <div class="portfolio-text "><img src="@images/EllipseText.svg" /></div>
                                         <p class="portfolio-text mx-2">15+ Clients</p>
                                     </div>
                                 </div>

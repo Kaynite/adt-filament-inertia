@@ -4,21 +4,21 @@
     <footer class="position-relative">
         <a href="#hero-sec" class="top-arrow position-absolute">
             <span>Back To Top</span>
-            <img src="../../images/top-arrow.svg" alt="" />
+            <img src="../../images/top-arrow.svg" />
         </a>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-3 mb-3">
-                    <img src="../../images/Footer-Logo.svg" class="img-fluid footer-logo" alt="" />
+                    <img src="../../images/Footer-Logo.svg" class="img-fluid footer-logo" />
                     <div class="socials gap-16 mt-40 d-flex align-items-center">
                         <a href="https://www.facebook.com/arabdtco">
-                            <img src="../../images/Facebook2.svg" alt="" /></a>
+                            <img src="../../images/Facebook2.svg" /></a>
                         <a href="https://www.linkedin.com/company/arabdt/mycompany/">
-                            <img src="../../images/white-linked-in.svg" alt="" /></a>
+                            <img src="../../images/white-linked-in.svg" /></a>
                         <a href="#">
-                            <img src="../../images/Instagram1.svg" alt="" /></a>
+                            <img src="../../images/Instagram1.svg" /></a>
                         <a href="#">
-                            <img src="../../images/Twitter1.svg" alt="" /></a>
+                            <img src="../../images/Twitter1.svg" /></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -61,15 +61,15 @@
                     <div class="lin-title">Get In Touch</div>
                     <ul>
                         <li>
-                            <img src="../../images/Location.svg" alt="" />
+                            <img src="../../images/Location.svg" />
                             <span>Egypt-5th District, New Cairo, Cairo, Egypt</span>
                         </li>
                         <li>
-                            <img src="../../images/Mail.svg" alt="" />
+                            <img src="../../images/Mail.svg" />
                             <span>Info@arabdt.com</span>
                         </li>
                         <li>
-                            <img src="../../images/Phone.svg" alt="" />
+                            <img src="../../images/Phone.svg" />
                             <span>(+20)2563 5967</span>
                         </li>
                     </ul>
@@ -81,7 +81,7 @@
             ArabDT &copy; 2023, All Rights Reserved
         </div>
         <div class="img-container-footer position-absolute">
-            <img src="../../images/footer-circles.svg" class="img-fluid d-none d-lg-block" alt="" />
+            <img src="../../images/footer-circles.svg" class="img-fluid d-none d-lg-block" />
         </div>
     </footer>
 </template>

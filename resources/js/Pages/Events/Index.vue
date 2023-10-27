@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import EventPost from '@/Components/EventPost.vue';
 import PageLayout from '@/Layouts/PageLayout.vue';
+import Breadcrumb from '@/Components/Breadcrumb.vue';
 
 type Event = {
     id: number;
@@ -29,14 +30,10 @@ defineProps<{
     <PageLayout title="News & Events">
         <!--Articles Section-->
         <section class="news-events pt-40 pb-80 position-relative">
-            <img src="@images/Vector5.svg" class="position-absolute branch-circles" alt="" />
+            <img src="@images/Vector5.svg" class="position-absolute branch-circles" />
             <div class="container">
                 <div class="page-locat mb-24">
-                    <a href="index.html" class="colored">Home</a>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>Life At ArabDT</span>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>News & Events</span>
+                    <Breadcrumb :items="[{ title: 'Life At ArabDT' }, { title: 'News & Events' }]" />
                 </div>
                 <div class="section-title mb-40">
                     <h4>Highlights</h4>
@@ -44,11 +41,11 @@ defineProps<{
                 </div>
                 <div class="main-blog">
                     <div class="img-container mb-16">
-                        <img src="@images/news-events-banner.png" class="img-fluid w-100" alt="" />
+                        <img src="@images/news-events-banner.png" class="img-fluid w-100" />
                     </div>
                     <h3 class="title colored mb-8">ArabDT Fourth Anniversary</h3>
                     <div class="blog-date mb-16 secondary-color">
-                        <img src="@images/calender.svg" class="img-fluid" alt="" />
+                        <img src="@images/calender.svg" class="img-fluid" />
                         <span>22 March 2023</span>
                     </div>
                     <p class="regular-parag mb-24">
@@ -67,13 +64,13 @@ defineProps<{
                     <div class="col-12 col-md-6">
                         <div class="card">
                             <div class="img-container d-flex flex-column justify-content-center align-items-center gap-8">
-                                <img src="@images/new-app-launch.png" class="img-fluid w-100 card-img-top" alt="..." />
+                                <img src="@images/new-app-launch.png" class="img-fluid w-100 card-img-top" />
 
                             </div>
                             <div class="card-body">
                                 <h3 class="title colored mb-8">New App Launch</h3>
                                 <div class="blog-date mb-16 secondary-color">
-                                    <img src="@images/calender.svg" class="img-fluid" alt="" />
+                                    <img src="@images/calender.svg" class="img-fluid" />
                                     <span>22 March 2023</span>
                                 </div>
                                 <p class="regular-parag mb-24">
@@ -88,13 +85,13 @@ defineProps<{
                     <div class="col-12 col-md-6">
                         <div class="card ">
                             <div class="img-container d-flex flex-column justify-content-center align-items-center gap-8">
-                                <img src="@images/project-celebration.png" class="card-img-top" alt="..." />
+                                <img src="@images/project-celebration.png" class="card-img-top" />
 
                             </div>
                             <div class="card-body">
                                 <h3 class="title colored mb-8">Project Celebration</h3>
                                 <div class="blog-date mb-16 secondary-color">
-                                    <img src="@images/calender.svg" class="img-fluid" alt="" />
+                                    <img src="@images/calender.svg" class="img-fluid" />
                                     <span>22 March 2023</span>
                                 </div>
                                 <p class="regular-parag mb-24">

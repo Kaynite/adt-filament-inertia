@@ -13,7 +13,7 @@ defineProps<{
                 {{ testimonial.testimonial }}
             </p>
             <div class="person d-flex align-items-center gap-8">
-                <img :src="testimonial.image" alt="" v-if="testimonial.image" />
+                <img :src="testimonial.image" v-if="testimonial.image" />
                 <div class="person-detl">
                     <h6>{{ testimonial.name }}</h6>
                     <span>{{ testimonial.position }}</span>

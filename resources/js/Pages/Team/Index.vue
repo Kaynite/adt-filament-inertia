@@ -2,11 +2,11 @@
 import PageLayout from "@/Layouts/PageLayout.vue";
 import TeamMember from "@/Components/TeamMember.vue";
 import RequestQuotation from "@/Components/RequestQuotation.vue";
+import Breadcrumb from "@/Components/Breadcrumb.vue";
 
 defineProps<{
     members: TeamMember[]
 }>()
-
 </script>
 
 
@@ -15,14 +15,10 @@ defineProps<{
     <PageLayout title="Team">
         <!--About-Team-Header Section-->
         <section class="about-team-header pt-40 pb-80 position-relative">
-            <img src="@images/Vector5.svg" class="position-absolute branch-circles" alt="" />
+            <img src="@images/Vector5.svg" class="position-absolute branch-circles" />
             <div class="container">
                 <div class="page-locat mb-24">
-                    <a href="index.html" class="colored">Home</a>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>About</span>
-                    <span><img src="@images/Icons-Outlined.svg" alt="" /></span>
-                    <span>Team</span>
+                    <Breadcrumb :items="[{ title: 'About' }, { title: 'Team' }]" />
                 </div>
                 <div class="section-header text-center mb-40">
                     <h4>Meet Our Team</h4>
@@ -32,7 +28,7 @@ defineProps<{
                     <div class="row">
                         <div class="col-12 col-md-4 mb-40">
                             <div class="card">
-                                <img src="images/Kamal.svg" class="card-img-top" alt="..." />
+                                <img src="images/Kamal.svg" class="card-img-top" />
                                 <div class="card-body text-center">
                                     <h5 class="card-title colored mb-8">Kamal Elhaddad</h5>
                                     <p class="card-text text-gray">Chief Executive Officer</p>
@@ -41,7 +37,7 @@ defineProps<{
                         </div>
                         <div class="col-12 col-md-4 mb-40">
                             <div class="card">
-                                <img src="images/Waleed.svg" class="card-img-top" alt="..." />
+                                <img src="images/Waleed.svg" class="card-img-top" />
                                 <div class="card-body text-center">
                                     <h5 class="card-title colored mb-8">Waleed Abdellatif</h5>
                                     <p class="card-text text-gray">Chief Delivery Officer</p>
@@ -50,7 +46,7 @@ defineProps<{
                         </div>
                         <div class="col-12 col-md-4 mb-40">
                             <div class="card">
-                                <img src="images/Hussein.svg" class="card-img-top" alt="..." />
+                                <img src="images/Hussein.svg" class="card-img-top" />
                                 <div class="card-body text-center">
                                     <h5 class="card-title colored mb-8">Hussien ElShahawy</h5>
                                     <p class="card-text text-gray">Service Delivery Manager</p>
@@ -70,7 +66,7 @@ defineProps<{
                     <h2><span class="colored">ArabDT</span> Innovators</h2>
                 </div>
                 <div class="row aboutm-pg">
-                    <TeamMember :member="member" v-for="member in members" />
+                    <TeamMember :member="member" v-for="member in members" :key="member.id" />
                 </div>
             </div>
         </section>
